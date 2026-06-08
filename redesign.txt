@@ -1,0 +1,47 @@
+Redesign the entire StockWise PHP inventory system frontend with a modern, professional UI. Requirements:
+
+1. DESIGN SYSTEM
+- Use a consistent color palette: primary #2563EB, dark sidebar #0F172A, light background #F8FAFC
+- Typography: Plus Jakarta Sans from Google Fonts throughout
+- Consistent spacing, border-radius: 12px on cards, 8px on buttons
+- Subtle box shadows on cards: 0 1px 3px rgba(0,0,0,0.08)
+
+2. SIDEBAR
+- Fixed dark sidebar (240px wide) with logo, nav links with active states
+- User avatar with initials, name, role badge, and sign out button at bottom
+- Section labels grouping nav items (MAIN, INVENTORY, ORDERS, SYSTEM)
+
+3. DASHBOARD (admin/dashboard.php)
+- 4 KPI cards at top: Total Products, Low Stock, Inventory Value, Pending Orders
+- Each card has a colored top border accent and an emoji icon
+- Low stock alert banner when items are below threshold
+- Recent orders table with status badges (color coded)
+- Order status progress bars (pending/approved/fulfilled/rejected)
+
+4. PRODUCTS PAGE (admin/products.php)
+- Searchable, filterable table with SKU, name, category, price, stock, status
+- Color coded stock numbers: green=ok, yellow=low, red=out
+- AJAX add/edit modal with all product fields, no page refresh
+- Archive button with confirmation
+
+5. ORDERS PAGE (admin/orders.php)
+- Filter tabs by status with counts
+- One-click Approve / Reject / Fulfil buttons per row using AJAX
+- Toast notification on every action
+
+6. USERS PAGE (admin/users.php)
+- User list with avatar initials, role badge, active/inactive toggle
+- AJAX add/edit modal, delete with confirmation
+
+7. STAFF PAGES
+- staff/dashboard.php: personalized greeting, my order stats, quick action buttons
+- staff/new_order.php: split layout — product list on left, live cart on right with quantity controls and running total
+- staff/inventory.php: read-only product table with search and low stock filter
+- staff/orders.php: my order history with status badges
+
+8. SHARED
+- includes/header.php: sidebar + top toast container
+- includes/footer.php: Bootstrap JS + showToast() function + extraJs support
+- Mobile responsive using Bootstrap 5 grid
+
+Keep all existing PHP/OOP logic untouched. Only update the HTML, CSS, and inline JavaScript UI layer.

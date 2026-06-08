@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php *)",
+      "Bash(/c/xampp/php/php.exe *)",
+      "Bash(curl -s -c /tmp/cookies.txt -b /tmp/cookies.txt -X POST http://localhost/inventory_system/index.php -d 'email=staff%40stockwise.com&password=admin123' -D - -L)"
+    ]
+  }
+}
